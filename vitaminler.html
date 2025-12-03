@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vitaminler</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f9f6f1;
+            font-family: 'Cormorant Garamond', serif;
+            color: #2d2b2b;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #2d2b2b;
+            text-decoration: none;
+        }
+
+        .navbar {
+            border-bottom: 1px solid #ccc;
+            background-color: #f9f6f1;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        .nav-link {
+            font-size: 18px;
+            padding-right: 20px;
+        }
+
+        .sticky-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .section {
+            padding-top: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            border: none;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebd5a;
+        }
+
+        .footer {
+            border-top: 1px solid #ccc;
+            padding: 3rem 0;
+            background-color: #f9f6f1;
+        }
+
+        .footer h5 {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            font-size: 16px;
+            color: #2d2b2b;
+        }
+
+        .nav-link.active {
+            font-weight: 600;
+            color: #b76e79 !important;
+            /* Açık bordo/gül tonu */
+            border-bottom: 2px solid #b76e79;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Aromaterapi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sabit-yaglar.html">Sabit Yağlar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ucucu-yaglar.html">Uçucu Yağlar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="serumlar.html">Serumlar</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="vitaminler.html">Vitaminler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mineraller.html">Mineraller</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dogal-parfumler.html">Doğal Parfümler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Başlık -->
+    <div class="container text-center my-5">
+        <h1 class="display-5 fw-semibold">Hayati Öneme Sahip Vitaminler</h1>
+        <p class="lead">Bağışıklık, enerji ve cilt sağlığı için vazgeçilmez vitaminlerin faydalarını keşfedin.</p>
+    </div>
+
+    <!-- Arama Kutusu -->
+    <div class="container mb-4">
+        <input id="searchInput" type="text" class="form-control" placeholder="🔍 Vitamin adı veya faydasıyla ara...">
+    </div>
+
+    <!-- İçerik -->
+    <div class="container">
+        <div class="row">
+            <!-- Sol Menü -->
+            <div class="col-md-3 mb-4">
+                <div class="list-group sticky-sidebar">
+                    <a href="#vitamina" class="list-group-item list-group-item-action">Vitamin A</a>
+                    <a href="#vitaminb" class="list-group-item list-group-item-action">Vitamin B Kompleksi</a>
+                    <a href="#vitaminc" class="list-group-item list-group-item-action">Vitamin C</a>
+                    <a href="#vitamind" class="list-group-item list-group-item-action">Vitamin D</a>
+                    <a href="#vitamine" class="list-group-item list-group-item-action">Vitamin E</a>
+                    <a href="#eczaci" class="list-group-item list-group-item-action text-success">💬 Eczacıya Danış</a>
+                </div>
+            </div>
+
+            <!-- Ana İçerik -->
+            <div class="col-md-9">
+
+                <div id="vitamina" class="section oil">
+                    <h3>Vitamin A</h3>
+                    <p>Göz sağlığı, bağışıklık sistemi ve cilt onarımı için gereklidir. Retinol olarak da bilinir.</p>
+                </div>
+
+                <div id="vitaminb" class="section oil">
+                    <h3>Vitamin B Kompleksi</h3>
+                    <p>B1, B2, B3, B6, B12 gibi vitaminleri içerir. Enerji üretimi, sinir sistemi ve hücre
+                        metabolizmasında etkilidir.</p>
+                </div>
+
+                <div id="vitaminc" class="section oil">
+                    <h3>Vitamin C</h3>
+                    <p>Antioksidan etkisi vardır, bağışıklığı güçlendirir, kolajen üretiminde rol oynar.</p>
+                </div>
+
+                <div id="vitamind" class="section oil">
+                    <h3>Vitamin D</h3>
+                    <p>Kemik sağlığı için kalsiyum emilimini artırır. Güneş ışığı ile sentezlenebilir.</p>
+                </div>
+
+                <div id="vitamine" class="section oil">
+                    <h3>Vitamin E</h3>
+                    <p>Cilt sağlığı ve hücre yenilenmesinde etkilidir. Güçlü bir antioksidandır.</p>
+                </div>
+
+                <!-- WhatsApp Butonu -->
+                <div id="eczaci" class="text-center mt-5">
+                    <a href="https://wa.me/90XXXXXXXXXX?text=Merhaba,+vitaminler+hakkında+sormak+istiyorum"
+                        class="btn btn-whatsapp btn-lg">
+                        💬 WhatsApp'tan Eczacımıza Danış
+                    </a>
+                    <p class="mt-2">Eczacımız hafta içi 09:00 - 18:00 arasında cevap vermektedir.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h5>Keşfet</h5>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="portfolio.html">Portföy</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h5>Sosyal Medya</h5>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="mt-4">&copy; 2025 Aromaterapi Blogu | Doğal Yaşam Rehberiniz</p>
+        </div>
+    </footer>
+
+    <!-- JS - Arama -->
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const oils = document.querySelectorAll(".oil");
+
+        searchInput.addEventListener("keyup", () => {
+            const filter = searchInput.value.toLowerCase();
+            oils.forEach(oil => {
+                const text = oil.innerText.toLowerCase();
+                oil.classList.toggle("hidden", !text.includes(filter));
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
