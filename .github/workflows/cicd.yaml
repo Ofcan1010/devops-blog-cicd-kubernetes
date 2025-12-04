@@ -1,4 +1,4 @@
-name: CI/CD for Blog App
+name: CI/CD for Blog App (ARM64)
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          platforms: linux/arm64           # ← ARM64 BURASI ÖNEMLİ
+          platforms: linux/arm64       # ← ARM64 BUILD (local cluster ile uyumlu)
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/blog-app:latest
@@ -40,11 +40,19 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Copy Kubeconfig
+      - name: Install kubectl
         run: |
-          echo "${{ secrets.KUBECONFIG_CONTENT }}" > kubeconfig
-          chmod 600 kubeconfig
+          curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+          chmod +x kubectl
+          sudo mv kubectl /usr/local/bin/
 
-      - name: Deploy manifests
+      - name: Load Kubeconfig
         run: |
-          kubectl --kubeconfig=kubeconfig apply -f k8s/
+          mkdir -p ~/.kube
+          echo "${{ secrets.KUBECONFIG_K3D }}" > ~/.kube/config
+          chmod 600 ~/.kube/config
+
+      - name: Deploy to k3d
+        run: |
+          kubectl apply -f k8s/
+          kubectl rollout restart deployment blog-deployment || true
